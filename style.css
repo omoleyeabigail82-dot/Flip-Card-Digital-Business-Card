@@ -1,0 +1,127 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0d0d;
+  font-family: system-ui, sans-serif;
+}
+
+
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+  border: 1px solid #d4af37;
+}
+
+.card-front {
+  background: #1a1a1a;
+  color: #d4af37;
+}
+
+.card-back {
+  background: #1a1a1a;
+  color: #f0f0f0;
+  transform: rotateY(180deg);
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d4af37;
+  margin-bottom: 15px;
+}
+
+.card-front h1 {
+  font-size: 22px;
+  margin: 10px 0 5px;
+  letter-spacing: 1px;
+}
+
+.card-front p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.card-back a {
+  color: #d4af37;
+  text-decoration: none;
+  margin: 6px 0;
+  display: block;
+  font-size: 14px;
+}
+
+.card-back a:hover {
+  text-decoration: underline;
+}
+
+.card-back {
+  background: #1a1a1a;
+  color: #f0f0f0;
+  transform: rotateY(180deg);
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d4af37;
+  margin-bottom: 15px;
+}
+
+.card-front h1 {
+  font-size: 22px;
+  margin: 10px 0 5px;
+  letter-spacing: 1px;
+}
+
+.card-front p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.card-back a {
+  color: #d4af37;
+  text-decoration: none;
+  margin: 6px 0;
+  display: block;
+  font-size: 14px;
+}
+
+.card-back a:hover {
+  text-decoration: underline;
+}
